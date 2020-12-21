@@ -1,0 +1,31 @@
+{% extends "__layout__.html" %}
+
+{% block content %}
+	<div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead style="font-size: 40px"><tr>
+                <th><p class="text-white">Schalter</p></th>
+                <th><p class="text-white pull-right">Status</p></th>
+            </tr></thead>
+            <tbody style="font-size: 30px">
+                {% for rspo in rspo_switches %} <tr>
+                    <td style="vertical-align: middle">{{ rspo }}</td>
+                    <td >{% if rspo_switches[rspo] %}
+                        <form class="navbar-form navbar-left pull-right" action="/turnoff" method="post">
+                            <input type="hidden" name="rspo" value="{{ rspo }}"></input>
+                            <input type="submit" class="btn btn-success btn-lg"
+                                style="width:100px" value="An"></input>
+                        </form>
+                    {% else %}
+                        <form class="navbar-form navbar-left  pull-right" action="/turnon" method="post">
+                            <input type="hidden" name="rspo" value="{{ rspo }}"></input>
+                            <input type="submit" class="btn btn-danger btn-lg"
+                                style="width:100px" value="Aus"></input>
+                        </form>
+                    {% endif %}</td>
+                </tr> {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

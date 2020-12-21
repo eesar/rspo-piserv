@@ -1,0 +1,42 @@
+{% extends "__layout__.html" %}
+
+{% block content %}
+<div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead style="font-size: 40px">
+                <tr>
+                    <th></th>
+                    <th>Attribut</th>
+                    <th>Wert</th>
+                </tr>
+            </thead>
+            <tbody style="font-size: 20px">
+                <tr>
+                    <td><span class="glyphicon glyphicon-calendar" style="font-size: 48px"></span></td>
+                    <td>Datum</td>
+                    <td>{{ today }}</td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-user" style="font-size: 48px"></span></td>
+                    <td>Nutzer<br>Rechnername</td>
+                    <td>{{ user }}<br>{{ node }}</td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-phone" style="font-size: 48px"></span></td>
+                    <td>Betriebssystem<br>Architektur</td>
+                    <td>{{ system }}<br>{{ arch }}</td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-hdd" style="font-size: 48px"></span></td>
+                    <td>Freier Speicher</td>
+                    <td>{{ freespace }} GByte</td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-time" style="font-size: 48px"></span></td>
+                    <td>Uptime</td>
+                    <td>{{ uptime }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
