@@ -51,6 +51,6 @@ As well as the ```turnon```, ```turnoff``` and ```__main__``` function,
 
 ### Open the Web Frontend
 
-If e.g. running in WSL2 [localhost:8080](localhost:8080)
+If e.g. running in WSL2 [localhost:8080](//localhost:8080)
 
-When running on raspberry [raspberrypi:8080](raspberrypi:8080)
+When running on raspberry [raspberrypi:8080](//raspberrypi:8080)
