@@ -8,9 +8,9 @@
                 <th><p class="text-white pull-right">Status</p></th>
             </tr></thead>
             <tbody style="font-size: 30px">
-                {% for rspo in rspo_switches %} <tr>
+                {% for rspo in l_rspo_switches %} <tr>
                     <td style="vertical-align: middle">{{ rspo }}</td>
-                    <td >{% if rspo_switches[rspo] %}
+                    <td >{% if d_rspo_switches[rspo] %}
                         <form class="navbar-form navbar-left pull-right" action="/turnoff" method="post">
                             <input type="hidden" name="rspo" value="{{ rspo }}"></input>
                             <input type="submit" class="btn btn-success btn-lg"

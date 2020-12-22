@@ -13,28 +13,28 @@
             <tbody style="font-size: 20px">
                 <tr>
                     <td><span class="glyphicon glyphicon-calendar" style="font-size: 48px"></span></td>
-                    <td>Datum</td>
-                    <td>{{ today }}</td>
+                    <td>Datum<br>Uptime</td>
+                    <td>{{ stats['today'] }}<br>{{ stats['uptime'] }}</td>
                 </tr>
                 <tr>
                     <td><span class="glyphicon glyphicon-user" style="font-size: 48px"></span></td>
                     <td>Nutzer<br>Rechnername</td>
-                    <td>{{ user }}<br>{{ node }}</td>
+                    <td>{{ stats['user'] }}<br>{{ stats['node'] }}</td>
                 </tr>
                 <tr>
                     <td><span class="glyphicon glyphicon-phone" style="font-size: 48px"></span></td>
-                    <td>Betriebssystem<br>Architektur</td>
-                    <td>{{ system }}<br>{{ arch }}</td>
+                    <td>Distribution<br>Betriebsystem<br>CPU Architektur</td>
+                    <td>{{ stats['osname'] }}<br>{{ stats['system'] }}<br>{{ stats['arch'] }}</td>
                 </tr>
                 <tr>
                     <td><span class="glyphicon glyphicon-hdd" style="font-size: 48px"></span></td>
                     <td>Freier Speicher</td>
-                    <td>{{ freespace }} GByte</td>
+                    <td>{{ stats['freespace'] }} GByte</td>
                 </tr>
                 <tr>
-                    <td><span class="glyphicon glyphicon-time" style="font-size: 48px"></span></td>
-                    <td>Uptime</td>
-                    <td>{{ uptime }}</td>
+                    <td><span class="glyphicon glyphicon-dashboard" style="font-size: 48px"></span></td>
+                    <td>Temperatur<br>Volts<br>Clock</td>
+                    <td>{{ stats['temp'] }}<br>{{ stats['volts'] }}<br>{{ stats['clock'] }} MHz</td>
                 </tr>
             </tbody>
         </table>

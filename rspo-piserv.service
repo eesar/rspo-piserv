@@ -1,0 +1,14 @@
+[Unit]
+Description=RSPO PiServ
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/rspo-piserv/rspo-piserv.py
+WorkingDirectory=/home/pi/rspo-piserv
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
