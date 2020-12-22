@@ -49,6 +49,40 @@ As well as the ```turnon```, ```turnoff``` and ```__main__``` function,
 [rspo-send](https://github.com/eesar/rspo-send).
 
 
+### Run the Webserver
+
+### For Testing
+
+```bash
+$ python3 rspo-piserv/rspo-piserv.py
+```
+
+### As a Service on Raspbian
+
+There is a helpful disrciption for this from [emxsys](https://gist.github.com/emxsys) on this
+[gist](https://gist.github.com/emxsys/a507f3cad928e66f6410e7ac28e2990f) post.
+And some more about service can be found on raspbian
+[systemd](https://www.raspberrypi.org/documentation/linux/usage/systemd.md) documentation.
+
+```bash
+$ cd /lib/systemd/system/
+$ sudo ln -s /home/pi/rspo-piserv/rspo-piserv.service
+$ sudo systemctl start rspo-piserv.service
+$ sudo systemctl check rspo-piserv.service
+```
+
+To start the service on boot up
+```bash
+$ sudo systemctl enable rspo-piserv.service
+```
+
+For some more info if the status is ```failed```.
+```bash
+$ sudo journalctl -f -u rspo-piserv.service
+$ sudo journalctl -xfe -u rspo-piserv.service
+```
+
+
 ### Open the Web Frontend
 
 If e.g. running in WSL2 [localhost:8080](//localhost:8080)
